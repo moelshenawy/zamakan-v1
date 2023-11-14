@@ -137,10 +137,12 @@ const SaudiMap = () => {
           wheel={{ wheelDisabled: true }}
 
           minScale={0.5}
-          maxScale={2}
+          maxScale={1}
           pan={{ disabled: false }}
           zoomIn={{ step: 100 }}
           zoomOut={{ step: 100 }}
+          centerZoomedOut={true}
+
 
         >
           {({ zoomIn, zoomOut, resetTransform }) => (
@@ -203,9 +205,7 @@ const SaudiMap = () => {
               </div>
 
               <TransformComponent>
-                <div id='map'>
-                  <Svg />
-                </div>
+                <Svg />
               </TransformComponent>
             </>
           )}
